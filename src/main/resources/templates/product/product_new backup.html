@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html layout:decorate="/template.html">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body layout:fragment="body">
+       <form th:object="${product}" th:action="@{/product/new}" method="post"
+		enctype="multipart/form-data">
+		<div >
+			<label > product </label>
+			<input type="text" name="name" placeholder="Enter name...">
+			<p th:errors="*{name}">
+		</div>
+		<div >
+			<label > quantity </label>
+			<input type="text" name="quantity" placeholder="số lượng...">
+		</div>
+		
+		
+		<div >
+			<label > createdadd </label>
+		<input type="text" placeholder="dd/MM/yyyy" name="createdAt">
+		</div>
+		
+		<div >
+			<label > price </label>
+			<input type="text" name="price" placeholder="Giá bán...">
+		</div>
+		
+		<div >
+			<label > description </label>
+			<input type="text" name="description" placeholder="Mô tả sản phẩm...">
+		</div>
+		
+	   	<div >
+				<label >type</label> 
+					<select name="type.id">
+						<option>Type</option>
+						<option th:each="u : ${typeList}" th:text="${u.name}" th:value="${u.id}"></option>
+					</select>
+			</div> 
+		<div style="margin-top: 10px;">
+			<button type="submit">Tạo</button>
+		</div>
+		
+	</form>
+    </body>
+</html>

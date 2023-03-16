@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<form th:action="@{/product/edit}" method="post"
+		enctype="multipart/form-data">
+		
+		<div>
+			<input type="number" name="id" th:value="${user.id}"
+				placeholder="Enter id..." readonly>
+		</div>
+		<div>
+			<input type="text" name="name" th:value="${user.getName()}"
+				placeholder="Enter name...">
+		</div>
+		<div>
+			<input type="text" name="quantity" th:value="${user.getQuantity()}"
+				placeholder="Enter name...">
+		</div>
+    <div>
+			<input type="text" name="price" th:value="${user.getPrice()}"
+				placeholder="Enter name...">
+		</div>
+		<div>
+			<input type="text" name="description" th:value="${user.getDescription()}"
+				placeholder="Enter name...">
+		</div>
+			
+		<div>
+		
+		<div >
+			<input type="text" name="createdAt" placeholder="Enter Date Create dd/MM/yyyy HH:mm" 
+			th:value="${#dates.format(user.createdAt, 'dd/MM/yyyy HH:mm')}">	
+		</div>
+                    <div >
+			<select name="type.id">
+				<option th:each="d : ${typeList}" th:value="${d.id}" th:text="${d.name}"  
+				th:selected="${d.id == user.type.id}"></option>
+			</select> 
+		</div>
+		
+			<button type="submit">Update</button>
+		</div>
+	</form>    </body>
+</html>

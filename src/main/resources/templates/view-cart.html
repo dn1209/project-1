@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+    <body>
+      
+	
+		  	<tr  th:each="entry : ${session.itemCarts}">
+				<td class="mb-4" th:text="${entry.key}"></td>
+				<td class="mb-5" th:text="${entry.value.product.name}"></td>
+				<td class="mb-4" th:text="${entry.value.quanty}"></td>
+				<td class="mb-2" th:text="${entry.value.total}"></td>
+				<td class="mb-4" th:text="${entry.value.quanty * entry.value.total}"></td>
+				
+				
+				<td>
+					
+					<a th:href="@{'/delete-to-cart?id=' + ${entry.key}}"> delete</a>
+				</td>
+			</tr>
+			
+		
+					<h1 th:text="${session.cartTotal}"></h1>
+							      			
+	<a th:href="@{/member/payment}">thanh toan</a>
+    </body>
+</html>

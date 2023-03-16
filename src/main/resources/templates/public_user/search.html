@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>SHOPPING</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        @charset "utf-8";
+
+body{
+	margin: 0px;
+}
+header{
+    background-color:black;
+    padding:1em;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.header li{
+    display:inline-block;
+	position: relative;
+}
+input[type="timkiem"] {
+    width: 500px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline:none;
+    padding: 12px 14px;
+}
+input[type="timkiem"]:focus{
+  width:500px; 
+}
+
+.dropaccbtn {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropacc {
+    position: relative;
+    display: inline-block;
+  }
+  .dropacc-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropacc-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", "sans-serif";
+  }
+  .dropacc-content a:hover {background-color: #f1f1f1}
+  .dropacc:hover .dropacc-content {
+    display: block;
+  }
+
+/*màu cho thanh menu */
+.menu{
+    background-color:#2F2F2F;
+	text-align: center;
+}
+/*chỉnh vị trí và loại bỏ bullet phía trước các mục trong li*/
+.menu ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+/*đưa các mục về hàng ngang*/
+.menu li{
+    display:inline-block;
+	position: relative;
+}
+.menu li a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:14px 16px;
+	font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", "sans-serif";
+}
+.menu li a:hover{
+    background-color: #F1F1F1;
+	text-decoration: none;
+	color: black;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #2F2F2F;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", "sans-serif";
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #F1F1F1;
+	color: black;
+}
+
+*{
+    box-sizing:border-box;
+}
+section{
+    background-color: #f1f1f1;
+	text-align: center;
+        
+}
+article{
+    width:20%;
+    float:left;
+    background-color:#f0f0f0;
+    padding:1em;
+    text-align: center;
+}
+section:after{
+    content:"";
+    clear:both;
+    display:table;
+    
+}
+
+footer{
+	background-color:black;
+	color: white;
+    /*padding:1em;*/
+    /*text-align:center;*/
+}
+.footer{
+    background-color: black;
+	text-align: center;
+}
+.footer article{
+    width:33.33%;
+    float:left;
+    background-color:black;
+    /*padding:1em;*/
+	text-align: center;
+}
+
+
+/*CSS login*/
+
+
+.button-btn{
+    border: 2px solid gray;
+    background-color: gray;
+    border-radius: 0.25rem;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+}
+.button-btn:hover{
+    background-color: #000;
+    color: #f0f0f0;
+}
+
+@media (max-width: 991px)
+#scrollUp {
+    bottom: 1.25rem;
+}
+#scrollUp {
+    border-radius: 3px;
+    bottom: 1.25rem;
+    color: lightseagreen;
+    font-size: 2.25rem;
+    height: 2.625rem;
+    line-height: 100%;
+    opacity: .5;
+    padding: 3px;
+    right: 1.25rem;
+    text-align: center;
+    width: 2.625rem;
+}
+
+.container{
+    padding-right: 15px;
+    padding-left: 55px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+      
+    </style>
+     <body style="background-color: #F1F1F1;">
+        
+        <header>
+            <nav class="header">
+                <ul>
+                    <li>
+                        &ensp;&ensp;&ensp;&ensp;
+                        <a href="index.html">
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                        </p>
+                    </li>
+                    <li>
+                        <form th:action="@{/home/shopage}" method="get">
+                            <input type="text" name="name" placeholder="Enter name..." th:value="${name}" align="middle">
+                            <button type="submit">Search</button>
+                            <i class="fas fa-search" style="color:white; font-size: 23px;" align="middle"></i>
+                            
+                        </form>
+                    </li>
+                    <li>
+                        <p>
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;                        
+                        </p>
+                    </li>
+                                   
+
+                    <li><p>&ensp;</p></li>
+                    
+                </ul>
+                
+            </nav>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a th:href="@{/home/shopage}">Trang Chủ</a></li>
+                <div class="dropdown">
+                    <a href="sanpham.html"><button class="dropbtn">Danh Mục</button></a>
+                      <div align="left" class="dropdown-content">
+                            <a th:href="@{/home/shopage?&nameType=gia%20dung}">Đồ Gia Dụng</a>
+                            <a href="laptopdohoakythuat.html">Thực Phẩm Khô</a>
+                            <a href="laptopgaming.html">Đồ Uống</a>
+                            <a href="linhkien.html">Gia Vị</a>
+                      </div>
+                </div>
+                
+                <li><a th:href="@{/view-cart}">Cart</a></li>
+                 <li><a th:href="@{/dang-nhap}">Đăng Nhập</a></li>
+                 <li><a th:href="@{/user/new}">Đăng ký</a></li>
+                 <li>   <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+</li>
+
+            </ul>
+        </nav>
+        <section >
+            <article th:each="u : ${productList}">
+                <span>
+                <img width="280px" height="190px" th:src="@{'/home/download?filename=' + ${u.image}}">
+                </span>
+                <h3 style="font-family: 'Open Sans', sans-serif;" th:text="${u.name}"></h3>
+                <h3 style="font-family: 'Open Sans', sans-serif;" th:text="${u.price}"></h3>
+
+                <a th:href="@{'/add-to-cart?id=' + ${u.id}}"><button class="button-btn" name="button" type="button">add to cart</button></a>
+            </article>
+    
+        </section>    
+        <footer>
+            <section class="footer">
+                <article style="text-align: left;">
+                    <h4>Đồ Án Tạp Hóa - Lập Trình Hướng Đối Tượng </h4>
+                    <P>Nhóm 11 - 65IT5</P>
+                </article>
+                
+                <article style="text-align: left;">
+                    <p style="color: darkgrey;"><i class="fas fa-phone" style="color: white; font-size: 20-px;"></i> <strong style="color: white;">Điện thoại:</strong> 0879292926</p>
+                    <p style="color: darkgrey;"><i class="fas fa-envelope" style="color: white; font-size: 20-px;"></i> <strong style="color: white;">Mail:</strong> hoangdangducnam@gmail.com</p>
+                    <p style="color: darkgrey;"><i class="fas fa-clock" style="color: white; font-size: 20-px;"></i> <strong style="color: white;">Giờ mở cửa:</strong> 8:00 đến 22:00 tất cả các ngày trong tuần</p>
+                </article>
+            </section>
+        </footer>
+    </body>
+</html>

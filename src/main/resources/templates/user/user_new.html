@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form th:object="${user}" th:action="@{/admin/user/new}" method="post"
+		>
+		<div >
+			<label > Tên : </label>
+			<input type="text" name="name" placeholder="Enter name...">
+			<p th:errors="*{name}">
+		</div>
+		
+		
+		<div >
+			<label > Tên tài khoản: </label>
+			<input type="text" name="username" placeholder="Tên tài khoản...">
+		</div>
+		
+		<div >
+			<label > Tạo mật khẩu: </label>
+			<input type="text" name="password" placeholder="Nhập mật khẩu...">
+		</div>
+           
+		
+		
+		
+	  
+		<div >
+			<button type="submit">Tạo</button>
+		</div>
+		
+	</form>
+
+    </body>
+</html>

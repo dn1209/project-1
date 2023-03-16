@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>buy date</th>
+				
+				<th>nguoi mua</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="u : ${billList}">
+				<td th:text="${u.getId()}"></td>
+				<td> ...</td>
+				<td th:text="${u.user.id}"></td>
+				
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<!--  <td colspan="4">
+					Tổng <span th:text="${count}"></span> bản ghi trong <span th:text="${totalPage}"> trang</span>
+				</td>-->
+			</tr>
+		</tfoot>
+	</table>    </body>
+</html>

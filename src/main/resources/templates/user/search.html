@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>PORNHUB</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body layout:fragment="body">
+<div>
+<a href="@{/logout}">logout</a>
+</div>
+<div >
+<a th:href="@{/admin/user/new}">Add new</a>
+</div>
+        
+        
+        <form th:action="@{/admin/user/search}" method="get">
+            
+            <input type="text" name="page" placeholder="Enter page..." th:value="${page}">
+
+		<select name="size">
+			<option th:selected="${size == 5}" value="5">5</option>
+			<option th:selected="${size == 10}" value="10">10</option>
+		</select>
+        </form>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>User Name</th>
+				<th>Password</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="u : ${userList}">
+				<td th:text="${u.id}"></td>
+				<td th:text="${u.name}"></td>
+				<td th:text="${u.username}"></td>
+				<td > *******</td>
+		   <!-- <td th:text="${u.userRole.name}"></td>   -->	
+				<td >
+					<a th:href="@{'/admin/user/get/' + ${u.id}}">View</a>
+					<a th:href="@{'/admin/user/edit?id=' + ${u.id}}">Edit</a>
+					<a th:href="@{'/admin/user/delete?id=' + ${u.id}}">Delete</a>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">
+					Tổng <span th:text="${count}"></span> bản ghi trong <span th:text="${totalPage}"> trang</span>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
